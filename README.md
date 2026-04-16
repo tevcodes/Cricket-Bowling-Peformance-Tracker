@@ -32,4 +32,4 @@ Run the TypeScript compiler in watch mode to automatically synchronize changes:
 tsc -w
 
 # Cricket Performance Tracker
-[🔗 Live Demo](https://tevcodes.github.io/cricket-performance-tracker/)
+[🔗 Live Demo](https://tevcodes.github.io/Cricket-Bowling-Peformance-Tracker/)
