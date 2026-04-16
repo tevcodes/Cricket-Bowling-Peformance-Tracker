@@ -1,0 +1,95 @@
+<!-- @format -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Bowling Tracker</title>
+    <link rel="icon" type="image/jpeg" href="assets/cricketFavicon.jpg" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="main-header">
+        <div class="logo-area">
+          <span class="team-tag">1st XI</span>
+          <h1>Bowling Performance Tracker</h1>
+        </div>
+        <div class="main-stat">
+          <p class="label">SEASON ECONOMY</p>
+          <h2 id="economy-display">0.00</h2>
+        </div>
+      </header>
+
+      <main class="content-grid">
+        <section class="card form-card">
+          <h3>Log Match Data</h3>
+          <form id="match-form">
+            <div class="input-group">
+              <label>Opponent</label>
+              <input
+                type="text"
+                id="opp-input"
+                placeholder="e.g. Wynberg BHS"
+                required
+              />
+            </div>
+
+            <div class="row">
+              <div class="input-group">
+                <label>Runs</label>
+                <input type="number" id="runs-input" placeholder="0" required />
+              </div>
+              <div class="input-group">
+                <label>Wickets</label>
+                <input type="number" id="wickets-input" placeholder="0" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-group">
+                <label>Overs</label>
+                <input
+                  type="number"
+                  id="overs-input"
+                  placeholder="0"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label>Balls</label>
+                <input type="number" id="balls-input" placeholder="0" max="5" />
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary">
+              Record Performance
+            </button>
+          </form>
+        </section>
+        <section class="card history-card">
+          <h3>Recent Deliveries</h3>
+          <div id="history-list" class="history-list">
+            <p class="empty-msg">No matches recorded yet.</p>
+          </div>
+          <button id="clear-btn" class="btn-secondary">
+            Clear Season Data
+          </button>
+        </section>
+      </main>
+    </div>
+
+    <div id="custom-modal" class="modal-overlay hidden">
+      <div class="modal-box">
+        <h3 id="modal-title">Confirm Action</h3>
+        <p id="modal-message">Are you sure?</p>
+        <div class="modal-actions">
+          <button id="modal-cancel">Cancel</button>
+          <button id="modal-confirm">Confirm</button>
+        </div>
+      </div>
+    </div>
+    <script src="./dist/cricketBowlingLogic.js" defer></script>
+  </body>
+</html>
