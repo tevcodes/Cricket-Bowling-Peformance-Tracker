@@ -28,4 +28,8 @@ Build Pipeline: Standardized build process separating source logic from distribu
 
 🔧 Setup
 Run the TypeScript compiler in watch mode to automatically synchronize changes:
+
 tsc -w
+
+# Cricket Performance Tracker
+[🔗 Live Demo](https://tevcodes.github.io/cricket-performance-tracker/)
